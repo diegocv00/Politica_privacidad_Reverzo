@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverzo - Política de privacidad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <div class="container">
+        <main class="card">
+            <header class="header">
+                
+                <div class="titulo-wrapper">
+                    <img src="titulo.png" alt="Reverzo" class="titulo" id="logoApp" onerror="this.style.display='none'">
+                </div>
+                <h1>Política de privacidad</h1>
+                <p class="subtitle">Última actualización: 4 de Marzo de 2026</p>
+            </header>
+
+            <article class="policy-content">
+                <section>
+                    <h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.082.477 4 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.082.477-4 1.253" />
+                        </svg>
+                        Nuestra naturaleza
+                    </h2>
+                    <p>Reverzo es un marketplace dedicado a la venta y reventa de libros. Nuestra plataforma facilita el contacto entre compradores y vendedores y fomenta la creación de comunidades literarias.</p>
+                </section>
+
+                <section>
+                    <h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+                        </svg>
+                        Información recopilada
+                    </h2>
+                    <ul>
+                        <li><strong>Perfil de usuario:</strong> Nombre, correo electrónico y fotos de libros publicados.</li>
+                        <li><strong>Interacciones en comunidad:</strong> Mensajes o publicaciones realizadas en los grupos de intereses similares dentro de la app.</li>
+                       
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.546 1.159 3.696 1.159 5.242 0l.879-.659M8 7.182l.879-.659c1.546-1.159 3.696-1.159 5.242 0l.879.659" />
+                        </svg>
+                        Transacciones y pagos
+                    </h2>
+                    <p><strong>Importante:</strong> Reverzo no procesa ni almacena datos de tarjetas de crédito o cuentas bancarias. Nuestra función se limita a poner en contacto al comprador y al vendedor. Cualquier transacción económica se realiza de forma externa y bajo responsabilidad de las partes involucradas.</p>
+                </section>
+
+                <section class="contact-card">
+                    <h2>Atención al usuario (PQRS)</h2>
+                    <p>¿Tienes dudas o deseas ejercer tus derechos de acceso o eliminación de datos? Escríbenos:</p>
+                    <a href="mailto:reverzo.app@outlook.com" class="email-link">reverzo.app@outlook.com</a>
+                </section>
+            </article>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Reverzo. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+    <script>
+        window.onload = () => {
+            const logo = document.getElementById('logoApp');
+            if (logo) logo.classList.add('pulse');
+        }
+    </script>
+</body>
+</html>

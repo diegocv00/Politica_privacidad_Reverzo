@@ -1,0 +1,223 @@
+:root {
+    --primary: #135bec;
+    --primary-dark: #0d47a1;
+    --bg-start: #dddbd8;
+    --bg-end: #dfd7d1;
+    --card-bg: #f4f7f6;
+    --text: #1e293b;
+    --text-light: #64748b;
+    --border: rgba(226, 232, 240, 0.8);
+    --radius: 24px;
+    --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--bg-start) 0%, var(--bg-end) 100%);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 850px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: var(--radius);
+    padding: 60px;
+    box-shadow: var(--shadow);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+/* Contenedor del logo con ajuste de mezcla */
+.titulo-wrapper {
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
+.titulo {
+    width: auto;
+    max-width: 280px;
+    height: auto;
+    max-height: 100px;
+    border-radius: 12px;
+    transition: var(--transition);
+    /* mix-blend-mode: multiply hace que el fondo blanco de la imagen 
+               sea transparente sobre el fondo del contenedor */
+    mix-blend-mode: multiply;
+}
+
+.titulo:hover {
+    transform: scale(1.05) rotate(1deg);
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 800;
+    background: linear-gradient(to right, var(--primary), #4f46e5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    color: var(--text-light);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.policy-content {
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+section {
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+}
+
+section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+h2 svg {
+    width: 24px;
+    height: 24px;
+    stroke-width: 2.5;
+}
+
+p {
+    margin-bottom: 16px;
+    color: #475569;
+    text-align: justify;
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 16px;
+}
+
+li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    color: #475569;
+    text-align: justify;
+}
+
+li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.contact-card {
+    background: rgba(19, 91, 236, 0.08);
+    border-radius: 16px;
+    padding: 32px;
+    margin-top: 24px;
+    text-align: center;
+}
+
+.email-link {
+    color: var(--primary);
+    font-weight: 700;
+    text-decoration: none;
+    transition: var(--transition);
+    display: inline-block;
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+.email-link:hover {
+    transform: scale(1.05);
+    color: var(--primary-dark);
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: var(--text-light);
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+/* Animación de pulso para el logo al cargar */
+@keyframes pulseLogo {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse {
+    animation: pulseLogo 0.6s ease-in-out;
+}
+
+@media (max-width: 640px) {
+    .card {
+        padding: 40px 24px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .titulo {
+        max-width: 200px;
+    }
+}
